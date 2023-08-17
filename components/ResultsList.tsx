@@ -4,6 +4,7 @@ import Link from "next/link";
 type Props = {
   results: PageResult[];
   term: string;
+  
 };
 
 function ResultsList({ results, term }: Props) {
@@ -13,7 +14,7 @@ function ResultsList({ results, term }: Props) {
       <div className="w-36 md:w-64">
         {results.map((pageResult) => (
           <div key={pageResult.job_id} className="space-y-2">
-            {pageResult.content.results.filters?.map((filter, i) => (
+            {pageResult.content.results.filters?.map((filter,i) => (
               <div key={i} className="border rounded-r-lg md:rounded-lg p-5">
                 <p className="font-bold">{filter.name}</p>
                 <div className="flex flex-col">
